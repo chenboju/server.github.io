@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .b{
+            list-style: none;
+        }
+        
+        .a{
+            width: 500px;
+            height: 20vw;
+            border: 1px solid red;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .b{
+            width: 200%;
+            height: 20vw;
+            animation: picmove 1s linear infinite forwards;
+        }
+        
+        @keyframes picmove {
+            from {
+                transform: translate(0);
+            }
+            to {
+                transform: translate(-1500px);
+            }
+        }
+        
+        img {
+            width: 250px;
+            height: 20vw;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <ul class="b">
+            <!--<li><img src="image/a01.jpg" alt=""></li>
+            <li><img src="image/a02.jpg" alt=""></li>
+            <li><img src="image/a03.jpg" alt=""></li>
+            <li><img src="image/a04.jpg" alt=""></li>!-->
+            <li><img src="image/a05.jpg" alt="">
+            <li><img src="image/a06.jpg" alt=""></li>
+            <li><img src="image/a06.5.jpg" alt=""></li>
+            <li><img src="image/a07.jpg" alt=""></li>
+            <li><img src="image/a07.5.jpg" alt=""></li>
+            <li><img src="image/a08.jpg" alt=""></li>
+            <li><img src="image/a09.jpg" alt=""></li>
+            <li><img src="image/a010.jpg" alt=""></li>
+            <li><img src="image/a10.5.jpg" alt=""></li>
+            <li><img src="image/a11.jpg" alt=""></li>
+            <li><img src="image/a12.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+
+</html>

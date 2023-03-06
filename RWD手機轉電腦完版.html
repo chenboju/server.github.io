@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="reset.css">
+    <title>RWD</title>
+    <style>
+        .footer{
+            background-color: black;
+            text-align: center;
+            color: aliceblue;
+            font: 40px;
+        }
+        img{
+            vertical-align:bottom;
+        }
+        .banner img{
+            width: 100%;
+        }
+        .item-group{
+            margin: auto;
+            width: 100%;
+            transition: 0.5s;
+        }
+        .item-pic1{
+            margin: auto;
+            width: 100%;
+            transition: 0.5s;
+        }
+        .item-pic2{
+            margin: auto;
+            width: 100%;
+            transition: 0.5s;
+        }
+        .pic{
+            margin: auto;
+            width: 100%;
+            transition: 0.5s;
+        }
+        .title{
+            padding: 20px 0;
+            background-color: aqua;
+
+        }
+        .title h2{
+            font-size: 40px;
+            letter-spacing: 20px;
+            text-align: center;
+            margin: 0 0 10px;
+        }
+        .title p{
+            font-size: 30px;
+            letter-spacing: 8px;
+            text-align-last: justify;
+        }
+        .pic img{
+            width: 100%;
+        }
+        .item-pic1 img{
+            width: 100%;
+        }
+        .item-pic2 img{
+            width: 100%;
+        }
+        .item-group img{
+            width: 100%;
+        }
+        .pic img{
+            width: 100%;
+        }
+        .item{
+            margin: 40px 20px;
+            padding: 20px;
+            border: 2px solid#000;
+        }
+        .item  p{
+            font-size: 20px;
+            text-align: center;
+            color: blueviolet;
+            margin: 10px 0;
+            padding: 10px 0;
+        }
+        
+        @media screen and (min-width:1024px) {
+            .item-group{
+                display: flex;
+                width: 1200px;
+            }
+            .item-pic1{
+                display: flex;
+                width: 1200px;
+            }
+            .item-pic2{
+                display: flex;
+                width: 1400px;
+            }
+            .pic{
+                display: flex;
+                width: 1500px;
+            }
+            .pic img{
+            height: 20vw;
+            }
+            .item-pic1 img{
+            height: 20vw;
+            }
+            .item-pic2 img{
+            height: 20vw;
+            }
+            .pic .item{
+            width: 280px;
+            margin: 10px;
+            padding: 10px;
+            }
+            .item-pic1 .item {
+            width: 300px;
+            margin: auto;
+            padding: 10px;
+            }
+            .item-pic2 .item {
+            width: 300px;
+            margin: auto;
+            padding: 10px;
+            }
+            .item-group .item{
+            width: 280px;
+            margin: 10px;
+            padding: 10px;
+            }
+        };
+        #menus_control{
+        position: absolute;
+        opacity: 0;
+        }
+    .header{
+        height: 50px;
+        background-color: black;
+        position: relative;
+    }
+    .menus_btn{
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    .menus_btn span{
+        opacity: 0;
+        display: block;
+    }
+    .menus_btn::before{
+        content: ' ';
+        position: absolute;
+        height: 2px;
+        width: 36px;
+        left: 2px;
+        background-color:aqua;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0 6px 0 aqua,
+                    0 -6px 0 aqua;
+    }
+    nav{
+        width: 80%;
+        height: calc(100vh - 50px);
+        background-color:black;
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s;
+    }
+    nav a{
+        display: flex;
+        text-decoration: none;
+        color: #fff;
+        padding: 0 20px;
+        border: 2px solid #fff;
+    }
+    #menus_control:checked ~ .header nav{
+        left: 0;
+    }
+    @media screen and (min-width:768px) {
+        .menus_btn{
+            display: none;
+        }
+        .header{
+            display: flex;
+            opacity: 0.5;
+        }
+        nav{
+            position: relative;
+            display: flex;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            background-color:#000;
+            text-align: center;
+            opacity: 0.5;
+            margin: auto;
+            padding: 0 10px;
+        }
+        nav a{
+            border:none;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 40px;
+            background-color:black;
+            color: #fff;
+            transition: 2s;
+        }
+        nav a:hover{
+        color: blue;
+        background-color: aquamarine;
+        transition: .5s;
+        }
+    a{
+        text-decoration: none;/*超連結可去底線*/
+    font-size: 40px;
+    margin: auto;
+    }
+    }
+    </style>
+    
+</head>
+<body>
+
+    <input type="checkbox" name="" id="menus_control">
+    <div class="header">
+        <label for="menus_control" class="menus_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="01.html">首頁</a>
+            <a href="角川.html">角川</a>
+            <a href="東立.html">東立</a>
+            <a href="尖端.html">尖端</a>
+            <a href="青文.html">青文</a>
+            
+        </nav>
+    </div>
+
+
+
+
+    <div class="banner">
+        <img src="image/a0.jpg" alt="">
+    </div>
+
+
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我</h2>
+                <p>我是一名輕小說愛好者，從高中畢業開始入坑，沒有很懂這個圈子，但友十分的熱愛。</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <img src="image/角川.jpg" alt="">
+                    <p>台灣角川股份有限公司(英語:Kadokawa Taiwan Corporation)，簡稱台角，是日本角川集團在台灣設立的出版公司，亦是其首間海外子公司。</p>
+                </div>
+                <div class="item">
+                    <img src="image/東立.jpg" alt="">
+                    <p>東立出版社有限公司(英語:Tong Li Publishing Co.），簡稱東立，是臺灣的漫畫、輕小說出版社，以翻譯出版各類日本漫畫為主。</p>
+                </div>
+                <div class="item">
+                    <img src="image/尖端.jpg" alt="">
+                    <p>尖端出版，簡稱SPP，是台灣城邦媒體控股集團旗下的出版事業部，以發行漫畫、輕小說和書籍為主</p>
+                </div>
+                <div class="item">
+                    <img src="image/青文.jpg" alt="">
+                    <p>青文出版社股份有限公司(CHING WIN PUBLISHING CO., LTD.），是台灣的一家以出版漫畫、輕小說為主的出版社。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>輕小說與漫畫</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt consectetur nam voluptas, laborum commodi quis culpa repudiandae, rerum ex maxime ratione fugit, quasi suscipit. Quod facere sit exercitationem expedita tempore!</p>
+            </div>
+            <div class="item-pic1">
+                <div class="item">
+                    <img src="a圖/a0.jpg" alt="果然我的青春戀愛搞錯了">
+                    <p>書系:輕小說</p>
+                    <p>書名:果然我的青春戀愛搞錯了</p>
+                    <p>作者:渡航</p>
+                    <p>繪者:ponkan8</p>
+                    <p>出版社:尖端出版社</p>
+                    <p>出版年:2012/09/13</p>
+                    <p>連載狀態:已完結</p>
+                    <p><a href="尖端.html">所有集數</a></p>
+                </div>
+                <div class="item">
+                    <img src="b圖/b0.jpg" alt="魔王學院的不適任者">
+                    <p>書系:輕小說</p>
+                    <p>書名:魔王學院的不適任者</p>
+                    <p>作者:秋</p>
+                    <p>繪者:靜間良紀</p>
+                    <p>出版社:角川出版社</p>
+                    <p>出版年:2019/06/12</p>
+                    <p>連載狀態:連載中</p>
+                    <p><a href="魔王.html">所有集數</a></p>
+                </div>
+                <div class="item">
+                    <img src="c圖/c0.jpg" alt="聖劍學院的魔劍使">
+                    <p>書系:輕小說</p>
+                    <p>書名:聖劍學院的魔劍使</p>
+                    <p>作者:志瑞祐</p>
+                    <p>繪者:遠坂あさぎ</p>
+                    <p>出版社:東立出版社</p>
+                    <p>出版年:2020/04/16</p>
+                    <p>連載狀態:連載中</p>
+                    <p><a href="聖劍.html">所有集數</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="about">
+    <div class="wrap">
+        <div class="item-pic2">
+            <div class="item">
+                <img src="image/達爾文0.jpg" alt="達爾文遊戲">
+                <p>書系:漫畫</p>
+                <p>書名:達爾文遊戲</p>
+                <p>作者:FLIPFLOPs</p>
+                <p>出版社:青文出版社</p>
+                <p>出版年:2014/05/16</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="青文.html">所有集數</a></p>
+            </div>
+            <div class="item">
+                <img src="image/式守0.jpg" alt="式守同學不只可愛而已">
+                <p>書系:漫畫</p>
+                <p>書名:式守同學不只可愛而已</p>
+                <p>作者: 真木蛍五</p>
+                <p>出版社:東立出版社</p>
+                <p>出版年:2020/06/04</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="式守.html">所有集數</a></p>
+            </div>
+            <div class="item">
+                <img src="image/換裝0.jpg" alt="戀上換裝娃娃">
+                <p>書系:漫畫</p>
+                <p>書名:戀上換裝娃娃  </p>
+                <p>作者:福田晋一</p>
+                <p>出版社:東立出版社</p>
+                <p>出版年:2019/12/06</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="換裝.html">所有集數</a></p>
+            </div>
+            <div class="item">
+                <img src="image/敬啟者01.jpg" alt="敬啟者：我與殺手小姐結婚了">
+                <p>書系:漫畫</p>
+                <p>書名:敬啟者：我與殺手小姐結婚了</p>
+                <p>作者: 高坂曇天</p>
+                <p>出版社:角川出版社</p>
+                <p>出版年:2021/05/10</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="敬啟者.html">所有集數</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="about">
+    <div class="wrap">
+        <div class="pic">
+            <div class="item">
+                <img src="image/聖戰0.jpg" alt="這是妳與我的最後戰場，或是開創世界的聖戰">
+                <p>書系:輕小說</p>
+                <p>書名:這是妳與我的最後戰場，或是開創世界的聖戰 </p>
+                <p>作者: 細音啓</p>
+                <p>繪者: 猫鍋蒼</p>
+                <p>出版社:尖端出版社</p>
+                <p>出版年:2019/05/22</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="聖戰.html">所有集數</a></p>
+            </div>
+            <div class="item">
+                <img src="image/天使0.jpg" alt="關於我在無意間被隔壁的天使變成廢柴這件事">
+                <p>書系:輕小說</p>
+                <p>書名:關於我在無意間被隔壁的天使變成廢柴這件事 </p>
+                <p>作者:佐伯さん</p>
+                <p>繪者:はねこと</p>
+                <p>出版社:東立出版社</p>
+                <p>出版年:2020/11/19</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="天使.html">所有集數</a></p>
+            </div>
+            <div class="item">
+                <img src="image/彈珠0.jpg" alt="彈珠汽水瓶裡的千歲同學">
+                <p>書系:輕小說</p>
+                <p>書名:彈珠汽水瓶裡的千歲同學 </p>
+                <p>作者:裕夢</p>
+                <p>繪者:raemz</p>
+                <p>出版社:東立出版社</p>
+                <p>出版年:2021/02/05</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="彈珠.html">所有集數</a></p>
+            </div>
+            <div class="item">
+                <img src="image/勇慢0.jpg" alt="因為不是真正的夥伴而被逐出勇者隊伍，流落到邊境展開慢活人生">
+                <p>書系:輕小說</p>
+                <p>書名:因為不是真正的夥伴而被逐出勇者隊伍，流落到邊境展開慢活人生</p>
+                <p>作者: ざっぽん</p>
+                <p>繪者:やすも</p>
+                <p>出版社:角川出版社</p>
+                <p>出版年:2019/12/18</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="勇慢.html">所有集數</a></p>
+            </div>
+            <div class="item">
+                <img src="image/轉生殺手01.jpg" alt="世界頂尖的暗殺者轉生為異世界貴族">
+                <p>書系:輕小說</p>
+                <p>書名:世界頂尖的暗殺者轉生為異世界貴族</p>
+                <p>作者: 月夜涙 </p>
+                <p>繪者: れい亜</p>
+                <p>出版社:角川出版社</p>
+                <p>出版年:2020/05/20</p>
+                <p>連載狀態:連載中</p>
+                <p><a href="轉生殺手.html">所有集數</a></p>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<input type="checkbox" name="" id="menus_control">
+    <div class="header">
+        <label for="menus_control" class="menus_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="01.html">首頁</a>
+            <a href="角川.html">角川</a>
+            <a href="東立.html">東立</a>
+            <a href="尖端.html">尖端</a>
+            <a href="青文.html">青文</a>
+            
+        </nav>
+    </div>
+
+
+    <div class="footer">
+        &copy; 2022/08/16
+    </div>
+</body>
+</html>

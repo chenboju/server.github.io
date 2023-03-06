@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+    <style>
+    #menus_control{
+        position: absolute;
+        opacity: 0;
+    }
+    .header{
+        height: 50px;
+        background-color: black;
+        position: relative;
+    }
+    .menus_btn{
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    .menus_btn span{
+        opacity: 0;
+        display: block;
+    }
+    .menus_btn::before{
+        content: ' ';
+        position: absolute;
+        height: 2px;
+        width: 36px;
+        left: 2px;
+        background-color:aqua;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0 6px 0 aqua,
+                    0 -6px 0 aqua;
+    }
+    nav{
+        width: 80%;
+        height: calc(100vh - 50px);
+        background-color:black;
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s;
+    }
+    nav a{
+        display: flex;
+        text-decoration: none;
+        color: #fff;
+        padding: 0 20px;
+        border: 2px solid #fff;
+    }
+    #menus_control:checked ~ .header nav{
+        left: 0;
+    }
+    @media screen and (min-width:768px) {
+        .menus_btn{
+            display: none;
+        }
+        .header{
+            display: flex;
+            opacity: 0.5;
+        }
+        nav{
+            position: relative;
+            display: flex;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            background-color:#000;
+            text-align: center;
+            opacity: 0.5;
+            margin: auto;
+            padding: 0 10px;
+        }
+        nav a{
+            border:none;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 40px;
+            background-color:black;
+            color: #fff;
+            transition: 2s;
+        }
+        nav a:hover{
+        color: blue;
+        background-color: aquamarine;
+        transition: .5s;
+        }
+    a{
+        text-decoration: none;/*超連結可去底線*/
+    font-size: 40px;
+    margin: auto;
+    }
+    }
+    </style>
+    
+</head>
+<body>
+    <input type="checkbox" name="" id="menus_control">
+    <div class="header">
+        <label for="menus_control" class="menus_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="01.html">首頁</a>
+            <a href="角川.html">角川</a>
+            <a href="東立.html">東立</a>
+            <a href="尖端.html">尖端</a>
+            <a href="青文.html">青文</a>
+            
+        </nav>
+    </div>
+</body>
+</html>

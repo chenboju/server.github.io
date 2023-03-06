@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="reset.css">
+    <title>RWD</title>
+    <style>
+        .footer{
+            background-color: black;
+            text-align: center;
+            color: aliceblue;
+            font: 40px;
+        }
+        img{
+            vertical-align:bottom;
+        }
+        .banner img{
+            width: 100%;
+        }
+        .item-group{
+            
+            margin: auto;
+            width: 100%;
+            transition: 0.5s;
+        }
+        .title{
+            padding: 20px 0;
+            background-color: aqua;
+        }
+        .title h2{
+            font-size: 40px;
+            text-align: center;
+        }
+        .title p{
+            font: 20px;
+            text-align: center;
+        }
+        .item .pic img{
+            width: 100%;
+        }
+        .item{
+            margin: 40px 20px;
+            padding: 20px;
+            border: 2px solid#000;
+        }
+        .item .text p{
+            font-size: 20px;
+            text-align: center;
+            color: blueviolet;
+            margin: 10px 0;
+            padding: 10px 0;
+        }
+        .item .text ul{
+            width: 500px;
+        }
+        
+        @media screen and (min-width:768px) {
+            .item-group{
+                width: 1500px;
+                display: flex;
+                margin: auto;
+            }
+
+        }
+        #menus_control{
+        position: absolute;
+        opacity: 0;
+    }
+    .header{
+        height: 50px;
+        background-color: black;
+        position: relative;
+    }
+    .menus_btn{
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    .menus_btn span{
+        opacity: 0;
+        display: block;
+    }
+    .menus_btn::before{
+        content: ' ';
+        position: absolute;
+        height: 2px;
+        width: 36px;
+        left: 2px;
+        background-color:aqua;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0 6px 0 aqua,
+                    0 -6px 0 aqua;
+    }
+    nav{
+        width: 80%;
+        height: calc(100vh - 50px);
+        background-color:black;
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s;
+    }
+    nav a{
+        display: flex;
+        text-decoration: none;
+        color: #fff;
+        padding: 0 20px;
+        border: 2px solid #fff;
+    }
+    #menus_control:checked ~ .header nav{
+        left: 0;
+    }
+    @media screen and (min-width:768px) {
+        .menus_btn{
+            display: none;
+        }
+        .header{
+            display: flex;
+            opacity: 0.5;
+        }
+        nav{
+            position: relative;
+            display: flex;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            background-color:#000;
+            text-align: center;
+            opacity: 0.5;
+            margin: auto;
+            padding: 0 10px;
+        }
+        nav a{
+            border:none;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 40px;
+            background-color:black;
+            color: #fff;
+            transition: 2s;
+        }
+        nav a:hover{
+        color: blue;
+        background-color: aquamarine;
+        transition: .5s;
+        }
+    a{
+        text-decoration: none;/*超連結可去底線*/
+    font-size: 40px;
+    margin: auto;
+    }
+    }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" name="" id="menus_control">
+    <div class="header">
+        <label for="menus_control" class="menus_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="01.html">首頁</a>
+            <a href="角川.html">角川</a>
+            <a href="東立.html">東立</a>
+            <a href="尖端.html">尖端</a>
+            <a href="青文.html">青文</a>
+            
+        </nav>
+    </div>
+
+
+
+
+    <div class="banner">
+        <img src="image/a0.jpg" alt="">
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt consectetur nam voluptas, laborum commodi quis culpa repudiandae, rerum ex maxime ratione fugit, quasi suscipit. Quod facere sit exercitationem expedita tempore!</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="image/角川.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>台灣角川股份有限公司(英語:Kadokawa Taiwan Corporation)，簡稱台角，是日本角川集團在台灣設立的出版公司，亦是其首間海外子公司。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="image/東立.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>東立出版社有限公司(英語:Tong Li Publishing Co.），簡稱東立，是臺灣的漫畫、輕小說出版社，以翻譯出版各類日本漫畫為主。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="image/尖端.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>尖端出版，簡稱SPP，是台灣城邦媒體控股集團旗下的出版事業部，以發行漫畫、輕小說和書籍為主</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="image/青文.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>青文出版社股份有限公司(CHING WIN PUBLISHING CO., LTD.），是台灣的一家以出版漫畫、輕小說為主的出版社。</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="servise">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="image/a01.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <p>書系:輕小說</p>
+                            <p>書名:果然我的青春戀愛搞錯了</p>
+                            <p>作者:渡航</p>
+                            <p>繪者:ponkan8</p>
+                            <p>出版社:尖端出版社</p>
+                            <p>出版年:2012/09/13</p>
+                            <p>連載狀態:已完結</p>
+                            <p>最初入手的小說也是最喜歡的</p>
+                            <p><a href="果青.html">所有集數</a></p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="image/b01.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <p>書名:魔王學院的不適任者</p>
+                            <p>作者:秋</p>
+                            <p>繪者:靜間良紀</p>
+                            <p>出版社:角川出版社</p>
+                            <p>出版年:2019/06/12</p>
+                            <p>連載狀態:連載中</p>
+                            <p>跟以往的龍傲天不同，故事整體是慢慢擴大，實力不是一切，勝敗反而在戰術層面</li>
+                            <p><a href="魔王.html">所有集數</a></p>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2022/08/16
+    </div>
+</body>
+</html>
